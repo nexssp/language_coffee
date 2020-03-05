@@ -3,6 +3,9 @@ languageConfig.title = "Coffee Script";
 languageConfig.description =
   "CoffeeScript is a little language that compiles into JavaScript.";
 languageConfig.url = "https://coffeescript.org";
+languageConfig.founders = ["Jeremy Ashkenas"];
+languageConfig.developers = [""];
+languageConfig.years = ["2009"];
 languageConfig.extensions = [".coffee"];
 languageConfig.executeCommandLine = "coffee";
 languageConfig.printCommandLine = ""; //no console.log() needed to display result eg node -p "4+6"
