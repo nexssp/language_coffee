@@ -1,4 +1,7 @@
-let languageConfig = Object.assign({}, require("../config.win32"));
+let languageConfig = Object.assign(
+  {},
+  require(`../config.${process.platform}`)
+);
 languageConfig.title = "Coffee Script";
 languageConfig.description =
   "CoffeeScript is a little language that compiles into JavaScript.";
@@ -17,8 +20,8 @@ languageConfig.compilers = {
     install: "npm install --global coffeescript",
     command: "coffee",
     args: "<file>", //
-    help: ``
-  }
+    help: ``,
+  },
 };
 languageConfig.errors = require("./nexss.coffee.errors");
 languageConfig.languagePackageManagers = {
@@ -45,7 +48,7 @@ languageConfig.languagePackageManagers = {
     },
     // if command not found in specification
     // run directly on package manager
-    else: "npm"
+    else: "npm",
   },
   yarn: {
     installation: "scoop install yarn",
@@ -54,8 +57,8 @@ languageConfig.languagePackageManagers = {
     install: "yarn list",
     uninstall: "yarn remove",
     help: "yarn help",
-    version: "yarn help"
-  }
+    version: "yarn help",
+  },
 };
 
 module.exports = languageConfig;
