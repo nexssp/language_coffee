@@ -16,10 +16,10 @@ languageConfig.checkSyntax = "";
 languageConfig.interactiveShell = "coffee";
 languageConfig.builders = {};
 languageConfig.compilers = {
-  node: {
+  coffee: {
     install: "npm install --global coffeescript",
     command: "coffee",
-    args: "<file>", //
+    args: "<file>",
     help: ``,
   },
 };
